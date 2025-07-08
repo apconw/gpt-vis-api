@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   gpt-vis-api:
-    image: gpt-vis-api
+    image: gpt-vis-api:0.0.1
     container_name: gpt-vis-api
     ports:
       - "3100:3000"

@@ -28,12 +28,20 @@
 - Docker Compose
 ---
 
-## 🐳 部署方式
-
-### 构建镜像
+## 🚀 **快速启动**
 
 ```bash
-docker build -t gpt-vis-api .
+git clone git@github.com:apconw/gpt-vis-api.git
+docker-compose up -d
+
+手动创建minio chart-images bucket ; 同时创建accessKey和secretKey 修改docker-compose.yml中minio的配置重启即可
+```
+> ⚠️ 注意：请先根据实际环境修改 docker-compose.yml 中的 MinIO 配置（如 accessKey、secretKey），然后重启服务。
+
+## 🐳 构建镜像
+
+```bash
+make build
 ```
 
 ## 启动服务
