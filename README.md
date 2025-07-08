@@ -38,14 +38,14 @@
 
 ## 🚀 **快速启动**
 
+### 第一步 克隆仓库
 ```bash
-# 第一步 克隆仓库
 git clone git@github.com:apconw/gpt-vis-api.git
 
 # 启动服务
 docker-compose up -d
 ```
-## 第二步 minio配置
+### 第二步 minio配置
 - 登录minio控制台http://localhost:19201 admin/12345678
 - 1.手动创建minio 名字为chart-images的bucket **要求public类型的bucket**
 - 2.创建accessKey和secretKey 修改docker-compose.yml中minio的配置重启即可
