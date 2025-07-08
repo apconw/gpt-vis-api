@@ -8,12 +8,12 @@ services:
       - "3100:3000"
     environment:
       MINIO_ENDPOINT: host.docker.internal
-      MINIO_PORT: 19000
+      MINIO_PORT: 19200
       MINIO_USE_SSL: "false"
-      MINIO_ACCESS_KEY: 50pS8wkhfU5BWWiPHpRG
-      MINIO_SECRET_KEY: lHgYeBD1OkNl5bE1MgF4rB4hEUEaZbUivymiHbCO
+      MINIO_ACCESS_KEY: ymoEVW2VQQrKivbHMlcF
+      MINIO_SECRET_KEY: RV0uYvt9gKD5XclaCzTqEHOSAgXppzbgxjdfro6a
       MINIO_BUCKET: chart-images
-      MINIO_PUBLIC_DOMAIN: "http://localhost:19000"
+      MINIO_PUBLIC_DOMAIN: "http://localhost:19200"
     extra_hosts:
       - "host.docker.internal:host-gateway"
     restart: unless-stopped
@@ -23,10 +23,10 @@ services:
 
   minio:
     image: minio/minio:RELEASE.2025-04-22T22-12-26Z
-    container_name: minio
+    container_name: chart-minio
     ports:
-      - "19000:9000"
-      - "19001:9001"
+      - "19200:9000"
+      - "19201:9001"
     volumes:
       - ./volume/minio/data:/data
     environment:

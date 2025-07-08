@@ -17,15 +17,15 @@
 
 ## 🎬 运行效果
 - [sanic-web](https://github.com/apconw/sanic-web)项目对接效果如下：
-![image](./img.png)
+![image](./images/img.png)
 
 ## QA交流群
 - 大模型应用交流群欢迎大家, 欢迎加进群讨论分享经验
 - 关注下面的公众号点击·**微信群**菜单添加微信拉你入群
 
-|                微信群                 |
-|:----------------------------------:|
-|     ![image](wchat-search.png)     | 
+|                 微信群                 |
+|:-----------------------------------:|
+| ![image](./images/wchat-search.png) | 
 
 ## 🔧 环境准备
 
@@ -46,13 +46,17 @@ git clone git@github.com:apconw/gpt-vis-api.git
 docker-compose up -d
 ```
 ## 第二步 minio配置
-- 登录minio控制台http://localhost:19001 admin/12345678
+- 登录minio控制台http://localhost:19201 admin/12345678
 - 1.手动创建minio 名字为chart-images的bucket **要求public类型的bucket**
 - 2.创建accessKey和secretKey 修改docker-compose.yml中minio的配置重启即可
 - 3.执行docker-compose down 停止服务
 - 4.执行docker-compose up -d 重启服务
 - 5.docker-compose.yml中minio的配置可以根据实际情况配置对应服务器ip：
 **MINIO_PUBLIC_DOMAIN: "http://localhost:19000"**
+
+![image](./images/minio.png)
+![image](./images/minio-b.png)
+
 
 
 > ⚠️ 注意：请先根据实际环境修改 docker-compose.yml 中的 MinIO 配置（如 accessKey、secretKey），然后重启服务。
