@@ -17,6 +17,7 @@
 
 ## 🎬 运行效果
 - [sanic-web](https://github.com/apconw/sanic-web)项目对接效果如下：
+- 部署流程参考语雀:https://www.yuque.com/lihuan-ulutg/kb/eqier012gbin4rb2
 ![image](./images/img.png)
 
 ## QA交流群
