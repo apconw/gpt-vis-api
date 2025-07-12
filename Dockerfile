@@ -1,5 +1,5 @@
 # Use the official Node.js image (Alpine can be used but requires additional dependencies)
-FROM node:18
+FROM node:20
 
 # Set the working directory
 WORKDIR /usr/src/app
@@ -43,4 +43,4 @@ RUN cd node_modules/.pnpm/canvas@2.11.2/node_modules/canvas && \
 EXPOSE 3000
 
 # Start command
-CMD ["pnpm", "start"]
+CMD ["sh","-c","pnpm start"]
