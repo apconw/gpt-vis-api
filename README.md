@@ -72,6 +72,34 @@ make build
 ### 测试接口
 访问地址：http://localhost:3100/generate
 
+### 图表类型定义
+
+| 文件名            | 说明                     |
+|----------------|------------------------|
+| area           | 区域图配置文件             |
+| bar         | 柱状图配置文件             |
+| boxplot     | 箱线图配置文件             |
+| column      | 直方图配置文件             |
+| dual-axes   | 双轴图配置文件             |
+| fishbone-diagram | 鱼骨图（因果图）配置文件       |
+| flow-diagram | 流程图配置文件             |
+| funnel      | 漏斗图配置文件             |
+| histogram   | 直方图配置文件             |
+| line        | 折线图配置文件             |
+| liquid      | 水波图配置文件             |
+| mind-map    | 思维导图配置文件            |
+| network-graph | 网络图（关系图）配置文件      |
+| organization-chart | 组织结构图配置文件          |
+| pie         | 饼图配置文件               |
+| radar       | 雷达图配置文件             |
+| sankey      | 桑基图配置文件             |
+| scatter     | 散点图配置文件             |
+| treemap     | 树图配置文件               |
+| types       | 类型定义文件（包含纹理等类型）   |
+| venn        | 维恩图配置文件             |
+| violin      | 小提琴图配置文件            |
+| word-cloud  | 词云图配置文件             |
+
 ```bash
 curl -X POST http://localhost:3100/generate \
   -H "Content-Type: application/json" \
@@ -87,4 +115,187 @@ curl -X POST http://localhost:3100/generate \
 {
   "url": "https://minio.example.com/gpt-vis/chart-123.png?Expires=XYZ"
 }
+
+curl -X POST http://localhost:3100/generate \
+  -H "Content-Type: application/json" \
+  -d '{
+    "type": "sankey",
+    "data": [
+        {
+            "source": "访问网站",
+            "target": "浏览商品",
+            "value": 1500
+        },
+        {
+            "source": "浏览商品",
+            "target": "加入购物车",
+            "value": 900
+        },
+        {
+            "source": "加入购物车",
+            "target": "进入结算",
+            "value": 600
+        },
+        {
+            "source": "进入结算",
+            "target": "完成支付",
+            "value": 400
+        },
+        {
+            "source": "进入结算",
+            "target": "放弃结算",
+            "value": 200
+        },
+        {
+            "source": "加入购物车",
+            "target": "离开网站",
+            "value": 300
+        },
+        {
+            "source": "浏览商品",
+            "target": "离开网站",
+            "value": 600
+        },
+        {
+            "source": "访问网站",
+            "target": "立即离开",
+            "value": 500
+        }
+    ],
+    "nodeAlign": "center",
+    "style": {
+        "backgroundColor": "#f8f9fa",
+        "palette": [
+            "#4e79a7",
+            "#f28e2b",
+            "#e15759",
+            "#76b7b2",
+            "#59a14f",
+            "#edc948",
+            "#b07aa1",
+            "#9c755f"
+        ],
+        "texture": "default"
+    },
+    "theme": {
+        "fontFamily": "WenQuanYi Zen Hei"
+    },
+    "width": 800,
+    "height": 500,
+    "title": "用户购买旅程桑基图",
+    "source": "mcp-server-chart"
+}'
+
+curl -X POST http://localhost:3100/generate \
+  -H "Content-Type: application/json" \
+  -d '{
+    "data": [
+        {
+            "category": "浏览网站",
+            "value": 50000
+        },
+        {
+            "category": "放入购物车",
+            "value": 35000
+        },
+        {
+            "category": "生成订单",
+            "value": 25000
+        },
+        {
+            "category": "支付订单",
+            "value": 15000
+        },
+        {
+            "category": "完成交易",
+            "value": 8000
+        }
+    ],
+    "style": {
+        "backgroundColor": "#ffffff",
+        "palette": [
+            "#FF6B6B",
+            "#4ECDC4",
+            "#45B7D1",
+            "#96CEB4",
+            "#FFEAA7"
+        ],
+        "texture": "default"
+    },
+    "theme": "default",
+    "width": 600,
+    "height": 400,
+    "title": "用户转化漏斗图",
+    "type": "funnel"
+}'
+
+
+# 组织架构图
+curl -X POST http://localhost:3100/generate \
+  -H "Content-Type: application/json" \
+  -d '{
+  "data": {
+    "name": "CEO",
+    "description": "首席执行官",
+    "children": [
+      {
+        "name": "CTO",
+        "description": "首席技术官",
+        "children": [
+          {
+            "name": "研发经理",
+            "description": "负责研发团队管理",
+            "children": [
+              {
+                "name": "高级工程师 张伟",
+                "description": "5年经验"
+              },
+              {
+                "name": "工程师 李娜",
+                "description": "2年经验"
+              }
+            ]
+          },
+          {
+            "name": "架构师 王强",
+            "description": "系统架构设计"
+          }
+        ]
+      },
+      {
+        "name": "CFO",
+        "description": "首席财务官",
+        "children": [
+          {
+            "name": "财务经理",
+            "description": "负责财务团队管理"
+          }
+        ]
+      },
+      {
+        "name": "COO",
+        "description": "首席运营官",
+        "children": [
+          {
+            "name": "市场总监",
+            "description": "负责市场战略"
+          },
+          {
+            "name": "运营经理",
+            "description": "负责日常运营"
+          }
+        ]
+      }
+    ]
+  },
+  "orient": "vertical",
+  "style": {
+    "backgroundColor": "#f8f9fa",
+    "texture": "default"
+  },
+  "theme": "default",
+  "width": 800,
+  "height": 600,
+  "type":"organization-chart"
+}'
 ```

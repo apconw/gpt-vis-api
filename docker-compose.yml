@@ -2,7 +2,8 @@ version: '3.8'
 
 services:
   gpt-vis-api:
-    image: apconw/gpt-vis-api:0.0.1
+#    image: apconw/gpt-vis-api:0.0.1
+    image: crpi-7xkxsdc0iki61l0q.cn-hangzhou.personal.cr.aliyuncs.com/apconw/gpt-vis-api:0.0.1
     container_name: gpt-vis-api
     ports:
       - "3100:3000"
@@ -10,8 +11,8 @@ services:
       MINIO_ENDPOINT: host.docker.internal
       MINIO_PORT: 19200
       MINIO_USE_SSL: "false"
-      MINIO_ACCESS_KEY: ymoEVW2VQQrKivbHMlcF
-      MINIO_SECRET_KEY: RV0uYvt9gKD5XclaCzTqEHOSAgXppzbgxjdfro6a
+      MINIO_ACCESS_KEY: gOTrJZGg9T03kb804inP
+      MINIO_SECRET_KEY: gLapxVyPECXGvRnDFx7Xr8TXXtWxUtRiBIDkKxrK
       MINIO_BUCKET: chart-images
       MINIO_PUBLIC_DOMAIN: "http://localhost:19200"
     extra_hosts:
