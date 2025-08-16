@@ -74,31 +74,30 @@ make build
 
 ### 图表类型定义
 
-| 文件名            | 说明                     |
-|----------------|------------------------|
-| area           | 区域图配置文件             |
-| bar         | 柱状图配置文件             |
-| boxplot     | 箱线图配置文件             |
-| column      | 直方图配置文件             |
-| dual-axes   | 双轴图配置文件             |
-| fishbone-diagram | 鱼骨图（因果图）配置文件       |
-| flow-diagram | 流程图配置文件             |
-| funnel      | 漏斗图配置文件             |
-| histogram   | 直方图配置文件             |
-| line        | 折线图配置文件             |
-| liquid      | 水波图配置文件             |
-| mind-map    | 思维导图配置文件            |
-| network-graph | 网络图（关系图）配置文件      |
-| organization-chart | 组织结构图配置文件          |
-| pie         | 饼图配置文件               |
-| radar       | 雷达图配置文件             |
-| sankey      | 桑基图配置文件             |
-| scatter     | 散点图配置文件             |
-| treemap     | 树图配置文件               |
-| types       | 类型定义文件（包含纹理等类型）   |
-| venn        | 维恩图配置文件             |
-| violin      | 小提琴图配置文件            |
-| word-cloud  | 词云图配置文件             |
+| 图表类型               | 说明   |
+|--------------------|------|
+| area               | 区域   |
+| bar                | 柱状   |
+| boxplot            | 箱线   |
+| column             | 直方   |
+| dual-axes          | 双轴   |
+| fishbone-diagram   | 鱼骨图  |
+| flow-diagram       | 流程   |
+| funnel             | 漏斗   |
+| histogram          | 直方   |
+| line               | 折线   |
+| liquid             | 水波   |
+| mind-map           | 思维导  |
+| network-graph      | 网络图  |
+| organization-chart | 组织结构 |
+| pie                | 饼    |
+| radar              | 雷达   |
+| sankey             | 桑基   |
+| scatter            | 散点   |
+| treemap            | 树    |
+| venn               | 维恩图  |
+| violin             | 小提琴图  |
+| word-cloud         | 词云   |
 
 ```bash
 curl -X POST http://localhost:3100/generate \
