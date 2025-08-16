@@ -16,8 +16,7 @@
 ---
 
 ## 🎬 运行效果
-- [sanic-web智能体+MCP集成部署流程参考语雀文档](https://www.yuque.com/lihuan-ulutg/kb/eqier012gbin4rb2?
-  singleDoc#%20%E3%80%8A%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%8A%A9%E6%89%8B-v1.1.5%E9%83%A8%E7%BD%B2%E6%AD%A5%E9%AA%A4%E3%80%8B)
+- [sanic-web部署流程参考语雀文档](https://www.yuque.com/lihuan-ulutg/kb/eqier012gbin4rb2?singleDoc#%20%E3%80%8A%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%8A%A9%E6%89%8B-v1.1.5%E9%83%A8%E7%BD%B2%E6%AD%A5%E9%AA%A4%E3%80%8B)
 - [sanic-web](https://github.com/apconw/sanic-web)项目对接效果如下：
 ![image](./images/img.png)
 
