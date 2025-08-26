@@ -16,7 +16,7 @@
 ---
 
 ## 🎬 运行效果
-- 本地部署体验参考项目: https://github.com/apconw/sanic-web
+- 实际落地项目验参考: https://github.com/apconw/sanic-web
 - 项目对接效果如下：
 
 https://github.com/user-attachments/assets/b2f440ba-6cc9-43bf-8af9-7e30d4a20702
