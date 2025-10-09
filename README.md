@@ -21,13 +21,30 @@
 
 https://github.com/user-attachments/assets/b2f440ba-6cc9-43bf-8af9-7e30d4a20702
 
-## QA交流群
-- 大模型应用交流群欢迎大家, 欢迎加进群讨论分享经验
-- 关注下面的公众号点击·**微信群**菜单添加微信拉你入群
+## 💬👥 技术支持群
+- 想了解更多？欢迎关注并转发下面我的微信公众号文章(持续更新中)。
+- 感谢支持，**您的赞助**将帮助我们持续更新！***入群方式请查看下面公众号文章末尾说明***。
 
-|                 微信群                 |
-|:-----------------------------------:|
-| ![image](./images/wchat-search.png) | 
+<table>
+<tbody>
+<tr>
+<td><img src="./images/ocr.png" alt="" style="width:60px;height:40px;"></td>
+<td><a href="https://mp.weixin.qq.com/s/kxzDs0chEqHYBYE_u8TZZw">大模型如何读懂任何格式文件并自动生成报告？LangGraph + MCP 实战解析</a></td>
+</tr>
+<tr>
+<td><img src="./images/antv-chart.png" alt="" style="width:60px;height:40px;"></td>
+<td><a href="https://mp.weixin.qq.com/s/8KmZaIEnCZlHFp_1oyknMA">用 AntV MCP Server Chart 赋能大模型 —— 从零构建可视化智能体，图表生成效率飙升！</a></td>
+</tr>
+<tr>
+<td><img src="./images/eno4j.png" alt="" style="width:60px;height:40px;"></td>
+<td><a href="https://mp.weixin.qq.com/s/XOdAeua2UyPxASM1CeXPmg">Neo4j构建语义图谱，大模型秒懂表关系，Text2SQ准确率狂飙300%！告别瞎猜！</a></td>
+</tr>
+<tr>
+<td><img src="./images/text2sql.png" alt="" style="width:60px;height:40px;"></td>
+<td><a href="https://mp.weixin.qq.com/s/sjCJNbdoNAfFOECWUKfElw">用 BM25 + 中文分词实现 Text2SQL 表过滤 —— 让大模型只看“相关表”，准确率飙升！![img.png](img.png)</a></td>
+</tr>
+</tbody>
+</table>
 
 ## 🔧 环境准备
 
