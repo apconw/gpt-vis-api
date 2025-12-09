@@ -89,6 +89,7 @@ app.post('/generate', async (req, res) => {
     }
 
     let spec;
+    let renderResult;
     try {
         // 深拷贝并清理 spec，避免修改原始对象
         spec = clean(JSON.parse(JSON.stringify(userSpec)));
@@ -148,7 +149,7 @@ app.post('/generate', async (req, res) => {
 
     try {
         // 调用 @antv/gpt-vis-ssr 渲染图表
-        const renderResult = await render(spec);
+        renderResult = await render(spec);
 
         // 检查是否支持 toBuffer
         if (typeof renderResult?.toBuffer !== 'function') {
@@ -217,6 +218,21 @@ app.post('/generate', async (req, res) => {
             success: false,
             errorMessage: '图表渲染失败: ' + error.message
         });
+    } finally {
+        // 主动释放渲染过程中持有的资源，避免长时间运行导致内存泄漏
+        if (renderResult) {
+            try {
+                if (typeof renderResult.destroy === 'function') {
+                    await renderResult.destroy();
+                } else if (typeof renderResult.dispose === 'function') {
+                    await renderResult.dispose();
+                } else if (typeof renderResult.close === 'function') {
+                    await renderResult.close();
+                }
+            } catch (cleanupError) {
+                console.warn('渲染资源释放失败:', cleanupError.message);
+            }
+        }
     }
 });
 

@@ -2,7 +2,7 @@
     "name": "gpt-vis-api",
     "version": "1.0.0",
     "scripts": {
-        "start": "node src/index.js"
+        "start": "node --max-old-space-size=4096 src/index.js"
     },
     "dependencies": {
         "@antv/gpt-vis-ssr": "0.2.2",
