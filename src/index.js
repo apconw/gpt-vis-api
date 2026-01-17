@@ -166,10 +166,14 @@ app.post('/generate', async (req, res) => {
         // 生成唯一文件名
         const fileName = `charts/${Date.now()}_${Math.random().toString(36).substr(2, 8)}.png`;
 
+        var metaData = {
+            'Content-Type': 'image/png'
+        }
+        
         // 上传到 MinIO
         try {
             await new Promise((resolve, reject) => {
-                minioClient.putObject(BUCKET_NAME, fileName, imageBuffer, (err, etag) => {
+                minioClient.putObject(BUCKET_NAME, fileName, imageBuffer, metaData, (err, etag) => {
                     if (err) reject(err);
                     else resolve(etag);
                 });
